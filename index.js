@@ -8,7 +8,7 @@ async function getUser(username) {
   try {
     const { data } = await axios(APIURL + username);
 
-    createUserCard(dat);
+    createUserCard(data);
     getRepos(username);
   } catch (err) {
     if (err.response.status == 404) {
